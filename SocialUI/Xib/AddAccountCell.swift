@@ -9,6 +9,10 @@ import UIKit
 
 class AddAccountCell: UITableViewCell {
 
+    @IBOutlet weak var socialName: UILabel!
+    @IBOutlet weak var socialPic: UIImageView!
+    
+    @IBOutlet weak var addAccountBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

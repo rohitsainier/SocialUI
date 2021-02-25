@@ -57,6 +57,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addAccountBtn" destination="HZa-pR-dPk" id="bfC-b6-K46"/>
+                <outlet property="socialName" destination="t2Q-ps-ePh" id="1gQ-1p-Xwp"/>
+                <outlet property="socialPic" destination="6vV-PQ-rVB" id="N8I-8k-n19"/>
+            </connections>
             <point key="canvasLocation" x="-136.23188405797103" y="91.40625"/>
         </tableViewCell>
     </objects>

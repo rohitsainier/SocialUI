@@ -28,20 +28,16 @@ class ViewController: UIViewController {
 //MARK: - TableView DataSource and Delegate Methods
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
-//    // estimatedHeightForRowAt
-//    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
-//
-//    // heightForRowAt
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return UITableView.automaticDimension
-//    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return socialVM.cellHeight(index: indexPath.row)
+    // estimatedHeightForRowAt
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
-    
+
+    // heightForRowAt
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+        
     // numberOfRowsInSection
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -52,12 +48,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as? CardCell
         else {return UITableViewCell()}
-        cell.SocialUsers = socialVM.users[indexPath.row].user
+        cell.SocialUsers = socialVM.users[indexPath.row]
+        cell.frame = tableView.bounds
+        cell.layoutIfNeeded()
+        cell.tableViewheightConstraint.constant = cell.tableView.contentSize.height
         return cell
-    }
-    
-    // didSelectRowAt
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
 

@@ -8,11 +8,12 @@
 import UIKit
 
 class CardCell: UITableViewCell {
-
+    
+    @IBOutlet weak var tableViewheightConstraint: NSLayoutConstraint!
     @IBOutlet weak var cardView: sainiCardView!
     @IBOutlet weak var tableView: UITableView!
     
-    var SocialUsers: [User] = []{
+    var SocialUsers: SocialUser!{
         didSet{
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -56,7 +57,7 @@ extension CardCell: UITableViewDelegate, UITableViewDataSource {
         if section == 0{
             return 1
         }
-        return SocialUsers.count
+        return SocialUsers.user.count
     }
     
     // cellForRowAt
@@ -66,6 +67,7 @@ extension CardCell: UITableViewDelegate, UITableViewDataSource {
             else {
                 return UITableViewCell()
             }
+            cell.socialName.text = SocialUsers.socialName
             return cell
         }
         else{
@@ -73,6 +75,7 @@ extension CardCell: UITableViewDelegate, UITableViewDataSource {
             else {
                 return UITableViewCell()
             }
+            cell.personNameLbl.text = SocialUsers.user[indexPath.row].name
             return cell
         }
         

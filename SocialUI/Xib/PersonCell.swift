@@ -9,6 +9,8 @@ import UIKit
 
 class PersonCell: UITableViewCell {
 
+    @IBOutlet weak var viewBtn: UIButton!
+    @IBOutlet weak var personNameLbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
