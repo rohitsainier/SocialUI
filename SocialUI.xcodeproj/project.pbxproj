@@ -13,6 +13,14 @@
 		22A1372E25E7832B0065A2CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22A1372D25E7832B0065A2CE /* Assets.xcassets */; };
 		22A1373125E7832B0065A2CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22A1372F25E7832B0065A2CE /* LaunchScreen.storyboard */; };
 		22A1374125E78AB50065A2CE /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1374025E78AB50065A2CE /* helper.swift */; };
+		22A1374625E7A81A0065A2CE /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1374425E7A81A0065A2CE /* CardCell.swift */; };
+		22A1374725E7A81A0065A2CE /* CardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A1374525E7A81A0065A2CE /* CardCell.xib */; };
+		22A1374B25E7A92C0065A2CE /* AddAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1374925E7A92C0065A2CE /* AddAccountCell.swift */; };
+		22A1374C25E7A92C0065A2CE /* AddAccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A1374A25E7A92C0065A2CE /* AddAccountCell.xib */; };
+		22A1375025E7B0710065A2CE /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1374E25E7B0710065A2CE /* PersonCell.swift */; };
+		22A1375125E7B0710065A2CE /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A1374F25E7B0710065A2CE /* PersonCell.xib */; };
+		22A1375425E7BF710065A2CE /* SocialUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1375325E7BF710065A2CE /* SocialUser.swift */; };
+		22A1375725E7BFFA0065A2CE /* SocialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1375625E7BFFA0065A2CE /* SocialViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		22A1373025E7832B0065A2CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22A1373225E7832B0065A2CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		22A1374025E78AB50065A2CE /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		22A1374425E7A81A0065A2CE /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		22A1374525E7A81A0065A2CE /* CardCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCell.xib; sourceTree = "<group>"; };
+		22A1374925E7A92C0065A2CE /* AddAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountCell.swift; sourceTree = "<group>"; };
+		22A1374A25E7A92C0065A2CE /* AddAccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAccountCell.xib; sourceTree = "<group>"; };
+		22A1374E25E7B0710065A2CE /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		22A1374F25E7B0710065A2CE /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
+		22A1375325E7BF710065A2CE /* SocialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialUser.swift; sourceTree = "<group>"; };
+		22A1375625E7BFFA0065A2CE /* SocialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +89,7 @@
 		22A1373A25E783980065A2CE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				22A1375325E7BF710065A2CE /* SocialUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -80,6 +97,7 @@
 		22A1373B25E783A00065A2CE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				22A1375625E7BFFA0065A2CE /* SocialViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -95,6 +113,12 @@
 		22A1373D25E783C20065A2CE /* Xib */ = {
 			isa = PBXGroup;
 			children = (
+				22A1374425E7A81A0065A2CE /* CardCell.swift */,
+				22A1374525E7A81A0065A2CE /* CardCell.xib */,
+				22A1374925E7A92C0065A2CE /* AddAccountCell.swift */,
+				22A1374A25E7A92C0065A2CE /* AddAccountCell.xib */,
+				22A1374E25E7B0710065A2CE /* PersonCell.swift */,
+				22A1374F25E7B0710065A2CE /* PersonCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -164,9 +188,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A1374C25E7A92C0065A2CE /* AddAccountCell.xib in Resources */,
 				22A1373125E7832B0065A2CE /* LaunchScreen.storyboard in Resources */,
+				22A1375125E7B0710065A2CE /* PersonCell.xib in Resources */,
 				22A1372E25E7832B0065A2CE /* Assets.xcassets in Resources */,
 				22A1372C25E783290065A2CE /* Main.storyboard in Resources */,
+				22A1374725E7A81A0065A2CE /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,9 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22A1375025E7B0710065A2CE /* PersonCell.swift in Sources */,
+				22A1375425E7BF710065A2CE /* SocialUser.swift in Sources */,
+				22A1374B25E7A92C0065A2CE /* AddAccountCell.swift in Sources */,
 				22A1374125E78AB50065A2CE /* helper.swift in Sources */,
 				22A1372925E783290065A2CE /* ViewController.swift in Sources */,
 				22A1372525E783290065A2CE /* AppDelegate.swift in Sources */,
+				22A1374625E7A81A0065A2CE /* CardCell.swift in Sources */,
+				22A1375725E7BFFA0065A2CE /* SocialViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

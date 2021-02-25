@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,10 +15,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b2I-z1-fWE">
-                                <rect key="frame" x="68" y="448" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="b2I-z1-fWE">
+                                <rect key="frame" x="0.0" y="126.5" width="414" height="735.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wIh-oF-7hU"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="0LE-Et-En2"/>
+                                </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nsf-wu-q7c" customClass="roundViewCorner" customModule="SocialUI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="93"/>
@@ -66,23 +68,27 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="b2I-z1-fWE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="29Y-VG-CnZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b2I-z1-fWE" secondAttribute="bottom" id="4ce-TD-GrK"/>
                             <constraint firstItem="Nsf-wu-q7c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6e6-tv-9vc"/>
+                            <constraint firstItem="b2I-z1-fWE" firstAttribute="top" secondItem="Nsf-wu-q7c" secondAttribute="bottom" constant="33.299999999999997" id="CTo-4p-j4W"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nsf-wu-q7c" secondAttribute="trailing" id="LKk-LK-m0H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b2I-z1-fWE" secondAttribute="trailing" id="fHE-Qw-bK2"/>
                             <constraint firstItem="Nsf-wu-q7c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="kPc-ON-Jvc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="b2I-z1-fWE" id="uFH-5v-50c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="73.660714285714278"/>
+            <point key="canvasLocation" x="7" y="-299"/>
         </scene>
     </scenes>
     <resources>
         <image name="back" width="9" height="15.5"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>
