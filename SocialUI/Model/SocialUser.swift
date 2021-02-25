@@ -10,9 +10,14 @@ import Foundation
 struct SocialUser{
     let socialPic: String
     let socialName: String
-    let user: [User]
+    let type: SocialType
+    var user: [User]
 }
 
 struct User{
     let name: String
+}
+enum SocialType:Int{
+    case facebook
+    case linkedin
 }

@@ -48,11 +48,26 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as? CardCell
         else {return UITableViewCell()}
+        cell.delegate = self
         cell.SocialUsers = socialVM.users[indexPath.row]
         cell.frame = tableView.bounds
         cell.layoutIfNeeded()
         cell.tableViewheightConstraint.constant = cell.tableView.contentSize.height
         return cell
+    }
+}
+
+extension ViewController:AddAccountDelegate{
+    func didAddAccountBtnTapped(socialType: SocialType) {
+        switch socialType {
+        case .facebook:
+            socialVM.users[socialType.rawValue].user.append(User(name: "hacker"))
+        case .linkedin:
+            socialVM.users[socialType.rawValue].user.append(User(name: "hacker"))
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 }
 

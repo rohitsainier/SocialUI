@@ -5,6 +5,12 @@
 //  Created by Rohit Saini on 25/02/21.
 //
 
+
+
+protocol AddAccountDelegate {
+    func didAddAccountBtnTapped(socialType: SocialType)
+}
+
 import UIKit
 
 class CardCell: UITableViewCell {
@@ -13,6 +19,7 @@ class CardCell: UITableViewCell {
     @IBOutlet weak var cardView: sainiCardView!
     @IBOutlet weak var tableView: UITableView!
     
+    var delegate:AddAccountDelegate?
     var SocialUsers: SocialUser!{
         didSet{
             DispatchQueue.main.async {
@@ -67,7 +74,10 @@ extension CardCell: UITableViewDelegate, UITableViewDataSource {
             else {
                 return UITableViewCell()
             }
+            cell.socialPic.image = UIImage(named: SocialUsers.socialPic)
             cell.socialName.text = SocialUsers.socialName
+            cell.addAccountBtn.tag = SocialUsers.type.rawValue
+            cell.addAccountBtn.addTarget(self, action: #selector(addAccount), for: .touchUpInside)
             return cell
         }
         else{
@@ -78,10 +88,8 @@ extension CardCell: UITableViewDelegate, UITableViewDataSource {
             cell.personNameLbl.text = SocialUsers.user[indexPath.row].name
             return cell
         }
-        
     }
-    
-    // didSelectRowAt
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    @objc func addAccount(sender: UIButton){
+        delegate?.didAddAccountBtnTapped(socialType: SocialType(rawValue: sender.tag) ?? .facebook)
     }
 }
