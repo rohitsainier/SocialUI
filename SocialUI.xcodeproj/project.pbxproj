@@ -21,6 +21,8 @@
 		22A1375125E7B0710065A2CE /* PersonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22A1374F25E7B0710065A2CE /* PersonCell.xib */; };
 		22A1375425E7BF710065A2CE /* SocialUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1375325E7BF710065A2CE /* SocialUser.swift */; };
 		22A1375725E7BFFA0065A2CE /* SocialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A1375625E7BFFA0065A2CE /* SocialViewModel.swift */; };
+		22C7911025E90315000394FB /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C7910E25E90315000394FB /* TitleCell.swift */; };
+		22C7911125E90315000394FB /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C7910F25E90315000394FB /* TitleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		22A1374F25E7B0710065A2CE /* PersonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonCell.xib; sourceTree = "<group>"; };
 		22A1375325E7BF710065A2CE /* SocialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialUser.swift; sourceTree = "<group>"; };
 		22A1375625E7BFFA0065A2CE /* SocialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialViewModel.swift; sourceTree = "<group>"; };
+		22C7910E25E90315000394FB /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		22C7910F25E90315000394FB /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,8 @@
 				22A1374A25E7A92C0065A2CE /* AddAccountCell.xib */,
 				22A1374E25E7B0710065A2CE /* PersonCell.swift */,
 				22A1374F25E7B0710065A2CE /* PersonCell.xib */,
+				22C7910E25E90315000394FB /* TitleCell.swift */,
+				22C7910F25E90315000394FB /* TitleCell.xib */,
 			);
 			path = Xib;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				22A1375125E7B0710065A2CE /* PersonCell.xib in Resources */,
 				22A1372E25E7832B0065A2CE /* Assets.xcassets in Resources */,
 				22A1372C25E783290065A2CE /* Main.storyboard in Resources */,
+				22C7911125E90315000394FB /* TitleCell.xib in Resources */,
 				22A1374725E7A81A0065A2CE /* CardCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +214,7 @@
 				22A1375025E7B0710065A2CE /* PersonCell.swift in Sources */,
 				22A1375425E7BF710065A2CE /* SocialUser.swift in Sources */,
 				22A1374B25E7A92C0065A2CE /* AddAccountCell.swift in Sources */,
+				22C7911025E90315000394FB /* TitleCell.swift in Sources */,
 				22A1374125E78AB50065A2CE /* helper.swift in Sources */,
 				22A1372925E783290065A2CE /* ViewController.swift in Sources */,
 				22A1372525E783290065A2CE /* AppDelegate.swift in Sources */,

@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     
     
     private func configUI(){
+        socialVM.delegate = self
         tableView.register(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "CardCell")
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension
@@ -55,7 +56,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.tableView.reloadData()
         cell.layoutIfNeeded()
         cell.tableViewheightConstraint.constant = cell.tableView.contentSize.height
-        
         return cell
     }
 }
@@ -64,12 +64,17 @@ extension ViewController:AddAccountDelegate{
     func didAddAccountBtnTapped(socialType: SocialType) {
         switch socialType {
         case .facebook:
-            socialVM.users[socialType.rawValue].user.append(User(name: "hacker"))
+            socialVM.addAccount(VC: self, socialType: .facebook)
         case .linkedin:
-            socialVM.users[socialType.rawValue].user.append(User(name: "hacker"))
+            socialVM.addAccount(VC: self, socialType: .linkedin)
         }
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
+    }
+}
+
+extension ViewController:SocialDelegate{
+    func didNewUserAdded() {
+        DispatchQueue.main.async { [weak self] in
+            self?.tableView.reloadData()
         }
     }
 }

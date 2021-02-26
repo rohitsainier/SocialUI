@@ -16,6 +16,7 @@ struct SocialUser{
 
 struct User{
     let name: String
+    let link:String
 }
 enum SocialType:Int{
     case facebook

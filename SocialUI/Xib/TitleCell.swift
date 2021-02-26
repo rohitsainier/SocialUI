@@ -1,19 +1,14 @@
 //
-//  AddAccountCell.swift
+//  TitleCell.swift
 //  SocialUI
 //
-//  Created by Rohit Saini on 25/02/21.
+//  Created by Rohit Saini on 26/02/21.
 //
 
 import UIKit
 
-class AddAccountCell: UITableViewCell {
+class TitleCell: UITableViewCell {
 
-    @IBOutlet weak var seperatorLine: UIView!
-    @IBOutlet weak var socialName: UILabel!
-    @IBOutlet weak var socialPic: UIImageView!
-    
-    @IBOutlet weak var addAccountBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

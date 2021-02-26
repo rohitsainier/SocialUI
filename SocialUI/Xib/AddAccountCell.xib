@@ -38,10 +38,10 @@
                         </state>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9l-2l-JDg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.0"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="0.5"/>
                         <color key="backgroundColor" red="0.81960784313725488" green="0.81960784313725488" blue="0.81960784313725488" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="height" id="gCt-Sx-DiY"/>
+                            <constraint firstAttribute="height" constant="0.29999999999999999" id="gCt-Sx-DiY"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -60,6 +60,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="addAccountBtn" destination="HZa-pR-dPk" id="bfC-b6-K46"/>
+                <outlet property="seperatorLine" destination="K9l-2l-JDg" id="voe-ag-IGF"/>
                 <outlet property="socialName" destination="t2Q-ps-ePh" id="1gQ-1p-Xwp"/>
                 <outlet property="socialPic" destination="6vV-PQ-rVB" id="N8I-8k-n19"/>
             </connections>
