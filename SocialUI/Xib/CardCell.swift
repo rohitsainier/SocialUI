@@ -22,8 +22,8 @@ class CardCell: UITableViewCell {
     var delegate:AddAccountDelegate?
     var SocialUsers: SocialUser!{
         didSet{
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
             }
         }
     }

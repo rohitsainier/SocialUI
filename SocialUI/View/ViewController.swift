@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         configUI()
     }
     
+    
     private func configUI(){
         tableView.register(UINib(nibName: "CardCell", bundle: nil), forCellReuseIdentifier: "CardCell")
         tableView.estimatedRowHeight = UITableView.automaticDimension
@@ -51,8 +52,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         cell.SocialUsers = socialVM.users[indexPath.row]
         cell.frame = tableView.bounds
+        cell.tableView.reloadData()
         cell.layoutIfNeeded()
         cell.tableViewheightConstraint.constant = cell.tableView.contentSize.height
+        
         return cell
     }
 }
